@@ -10,7 +10,7 @@ February 2026
 
 Multilingual language models are increasingly deployed in low-resource health information systems, yet we lack mechanistic understanding of how regional fine-tuning affects cross-lingual concept representations. We apply layer-wise residual stream cosine similarity analysis to three variants of Tiny Aya (Base, Fire, Earth) — a 3.35B-parameter multilingual model family — across 20 medical concepts in 10 languages. We extract hidden states at every transformer layer using HuggingFace Transformers (`output_hidden_states=True`) and measure cosine similarity between English and each target language to construct cross-lingual alignment curves.
 
-We find a universal **rise-peak-collapse** architecture: all variants build cross-lingual concept alignment through mid-network layers (peaking at L18-20), then destroy it at the final layers (L33-36). Regional fine-tuning does not shift when alignment occurs but rather *how much* alignment the model builds. For non-Latin-script languages, Fire and Earth achieve 12-40% higher peak cosine similarity than Base — with Hindi rising from 0.77 to 0.89 (+15%) and Amharic from 0.59 to 0.83 (+40%). Earth shows a slight numerical advantage over Fire for Amharic (0.83 vs 0.81), though the difference is too small to draw conclusions without significance testing. For Latin-script languages (Swahili, French, Spanish, Yoruba), all variants show 1.0 alignment at the embedding layer — a tokenizer artifact, not a learned representation.
+We find a universal **rise-peak-collapse** architecture: all variants build cross-lingual concept alignment through mid-network layers (peaking at L18-20), then destroy it at the final layers (L33-36). Regional fine-tuning does not shift when alignment occurs but rather *how much* alignment the model builds. For non-Latin-script languages, Fire and Earth achieve 12-40% higher peak cosine similarity than Base — with Hindi rising from 0.77 to 0.89 (+15%) and Amharic from 0.59 to 0.83 (+40%). Earth shows a slight numerical advantage over Fire for Amharic (0.83 vs 0.81), though the difference is too small to draw conclusions without significance testing. For most Latin-script languages (Swahili, French, Spanish), all variants show near-maximal alignment at the embedding layer — a tokenizer artifact, not a learned representation. Yoruba is a notable exception: despite using Latin script, it does not consistently reach embedding-level alignment, suggesting that script overlap is necessary but not sufficient for tokenizer-driven alignment.
 
 ## 1. Motivation
 
@@ -128,7 +128,7 @@ For Amharic, neither Base nor Fire consistently commit, but Earth reaches commit
 
 These findings inform the language routing system:
 
-1. **Route based on script, not just language.** For Latin-script languages, routing to a regional variant adds no measurable value — alignment is already maximal. Regional routing matters primarily for non-Latin scripts (Devanagari, Bengali, Ethiopic).
+1. **Route based on script, not just language.** For most Latin-script languages, routing to a regional variant adds no measurable value — alignment is already near-maximal. Regional routing matters primarily for non-Latin scripts (Devanagari, Bengali, Ethiopic). Note that Yoruba is an exception among Latin-script languages, indicating that low-resource Latin-script languages may still benefit from routing.
 
 2. **Don't route based on final-layer embeddings.** Cross-lingual alignment lives in mid-layers (L18-20) only. Final-layer representations are language-specific by design.
 

@@ -4,7 +4,7 @@ Mechanistic interpretability analysis of how regional fine-tuning affects cross-
 
 ## Key Finding
 
-> Tiny Aya builds shared cross-lingual concepts mid-network (layers 18-20) then destroys them at the output layers. All variants follow this rise-peak-collapse architecture, but regional fine-tuning (Fire, Earth) determines *how much* alignment the model builds: +15% for Hindi, +40% for Amharic. For Latin-script languages, alignment is already maximal at the embedding layer — a tokenizer artifact, not a learned capability.
+> Tiny Aya builds shared cross-lingual concepts mid-network (layers 18-20) then destroys them at the output layers. All variants follow this rise-peak-collapse architecture, but regional fine-tuning (Fire, Earth) determines *how much* alignment the model builds: +15% for Hindi, +40% for Amharic. For most Latin-script languages (French, Spanish, Swahili), alignment is near-maximal at the embedding layer — a tokenizer artifact, not a learned capability. Yoruba is a notable exception, suggesting script alone does not guarantee embedding-level alignment.
 
 ![Three-panel alignment curves showing Swahili (Latin script overlap), Hindi (Fire/Earth +15%), Amharic (Earth > Fire)](assets/tweet_three_panel.png)
 
