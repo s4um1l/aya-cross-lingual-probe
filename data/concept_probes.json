@@ -1,0 +1,342 @@
+{
+  "C01": {
+    "concept": "fever",
+    "category": "symptom",
+    "translations": {
+      "en": "The child has a fever.",
+      "hi": "बच्चे को बुखार है।",
+      "bn": "শিশুর জ্বর হয়েছে।",
+      "sw": "Mtoto ana homa.",
+      "am": "ህፃኑ ትኩሳት አለበት።",
+      "fr": "L'enfant a de la fièvre.",
+      "es": "El niño tiene fiebre.",
+      "ar": "الطفل يعاني من الحمى.",
+      "yo": "Ọmọ náà ní ibà.",
+      "ta": "குழந்தைக்கு காய்ச்சல் இருக்கிறது."
+    },
+    "flores_verified": true
+  },
+  "C02": {
+    "concept": "cough",
+    "category": "symptom",
+    "translations": {
+      "en": "The patient has a persistent cough.",
+      "hi": "रोगी को लगातार खाँसी हो रही है।",
+      "bn": "রোগীর ক্রমাগত কাশি হচ্ছে।",
+      "sw": "Mgonjwa ana kikohozi cha kudumu.",
+      "am": "ታማሚው የማያቋርጥ ሳል አለበት።",
+      "fr": "Le patient a une toux persistante.",
+      "es": "El paciente tiene una tos persistente.",
+      "ar": "المريض يعاني من سعال مستمر.",
+      "yo": "Aláìsàn náà ní ikọ́ tó ń bá a lọ.",
+      "ta": "நோயாளிக்கு தொடர்ச்சியான இருமல் இருக்கிறது."
+    },
+    "flores_verified": true
+  },
+  "C03": {
+    "concept": "diarrhea",
+    "category": "symptom",
+    "translations": {
+      "en": "The child is suffering from diarrhea.",
+      "hi": "बच्चे को दस्त हो रहे हैं।",
+      "bn": "শিশুটি ডায়রিয়ায় ভুগছে।",
+      "sw": "Mtoto anaugua kuharisha.",
+      "am": "ህፃኑ ተቅማጥ እየተሰቃየ ነው።",
+      "fr": "L'enfant souffre de diarrhée.",
+      "es": "El niño está sufriendo de diarrea.",
+      "ar": "الطفل يعاني من الإسهال.",
+      "yo": "Ọmọ náà ń jìyà ìgbẹ́ gbuuru.",
+      "ta": "குழந்தை வயிற்றுப்போக்கால் அவதிப்படுகிறது."
+    },
+    "flores_verified": true
+  },
+  "C04": {
+    "concept": "pain",
+    "category": "symptom",
+    "translations": {
+      "en": "The patient is experiencing severe pain.",
+      "hi": "रोगी को तेज दर्द हो रहा है।",
+      "bn": "রোগী তীব্র ব্যথা অনুভব করছে।",
+      "sw": "Mgonjwa anapata maumivu makali.",
+      "am": "ታማሚው ከባድ ህመም እያጋጠመው ነው።",
+      "fr": "Le patient ressent une douleur intense.",
+      "es": "El paciente está experimentando un dolor severo.",
+      "ar": "المريض يعاني من ألم شديد.",
+      "yo": "Aláìsàn náà ń ní ìrora líle.",
+      "ta": "நோயாளி கடுமையான வலியை அனுபவிக்கிறார்."
+    },
+    "flores_verified": true
+  },
+  "C05": {
+    "concept": "child",
+    "category": "entity",
+    "translations": {
+      "en": "The child needs medical attention.",
+      "hi": "बच्चे को चिकित्सा की आवश्यकता है।",
+      "bn": "শিশুটির চিকিৎসা প্রয়োজন।",
+      "sw": "Mtoto anahitaji matibabu.",
+      "am": "ህፃኑ የህክምና እንክብካቤ ያስፈልገዋል።",
+      "fr": "L'enfant a besoin de soins médicaux.",
+      "es": "El niño necesita atención médica.",
+      "ar": "الطفل يحتاج إلى رعاية طبية.",
+      "yo": "Ọmọ náà nílò ìtọ́jú ìṣègùn.",
+      "ta": "குழந்தைக்கு மருத்துவ கவனிப்பு தேவை."
+    },
+    "flores_verified": true
+  },
+  "C06": {
+    "concept": "mother",
+    "category": "entity",
+    "translations": {
+      "en": "The mother is caring for her sick child.",
+      "hi": "माँ अपने बीमार बच्चे की देखभाल कर रही है।",
+      "bn": "মা তার অসুস্থ সন্তানের যত্ন নিচ্ছেন।",
+      "sw": "Mama anamtunza mtoto wake mgonjwa.",
+      "am": "እናትየው የታመመውን ልጇን እየተንከባከበች ነው።",
+      "fr": "La mère s'occupe de son enfant malade.",
+      "es": "La madre está cuidando a su hijo enfermo.",
+      "ar": "الأم تعتني بطفلها المريض.",
+      "yo": "Ìyá náà ń tọ́jú ọmọ rẹ̀ tó ṣàìsàn.",
+      "ta": "தாய் தன் நோயுற்ற குழந்தையை கவனித்துக் கொள்கிறாள்."
+    },
+    "flores_verified": true
+  },
+  "C07": {
+    "concept": "doctor",
+    "category": "entity",
+    "translations": {
+      "en": "The doctor examined the patient carefully.",
+      "hi": "डॉक्टर ने रोगी की ध्यान से जाँच की।",
+      "bn": "ডাক্তার রোগীকে সাবধানে পরীক্ষা করলেন।",
+      "sw": "Daktari alimchunguza mgonjwa kwa makini.",
+      "am": "ሐኪሙ ታማሚውን በጥንቃቄ መረመረ።",
+      "fr": "Le médecin a examiné le patient avec soin.",
+      "es": "El médico examinó al paciente cuidadosamente.",
+      "ar": "فحص الطبيب المريض بعناية.",
+      "yo": "Dókítà náà ṣàyẹ̀wò aláìsàn náà dáradára.",
+      "ta": "மருத்துவர் நோயாளியை கவனமாக பரிசோதித்தார்."
+    },
+    "flores_verified": true
+  },
+  "C08": {
+    "concept": "medicine",
+    "category": "entity",
+    "translations": {
+      "en": "The patient needs to take medicine regularly.",
+      "hi": "रोगी को नियमित रूप से दवा लेनी चाहिए।",
+      "bn": "রোগীকে নিয়মিত ওষুধ খেতে হবে।",
+      "sw": "Mgonjwa anahitaji kutumia dawa mara kwa mara.",
+      "am": "ታማሚው በመደበኛነት መድሃኒት መውሰድ አለበት።",
+      "fr": "Le patient doit prendre ses médicaments régulièrement.",
+      "es": "El paciente necesita tomar medicamentos regularmente.",
+      "ar": "يحتاج المريض إلى تناول الدواء بانتظام.",
+      "yo": "Aláìsàn náà nílò láti mu oògùn nígbà gbogbo.",
+      "ta": "நோயாளி தொடர்ந்து மருந்து எடுக்க வேண்டும்."
+    },
+    "flores_verified": true
+  },
+  "C09": {
+    "concept": "hospital",
+    "category": "entity",
+    "translations": {
+      "en": "The patient was taken to the hospital.",
+      "hi": "रोगी को अस्पताल ले जाया गया।",
+      "bn": "রোগীকে হাসপাতালে নিয়ে যাওয়া হয়েছে।",
+      "sw": "Mgonjwa alipelekwa hospitali.",
+      "am": "ታማሚው ወደ ሆስፒታል ተወሰደ።",
+      "fr": "Le patient a été emmené à l'hôpital.",
+      "es": "El paciente fue llevado al hospital.",
+      "ar": "تم نقل المريض إلى المستشفى.",
+      "yo": "Wọ́n gbé aláìsàn náà lọ sí ilé ìwòsàn.",
+      "ta": "நோயாளி மருத்துவமனைக்கு கொண்டு செல்லப்பட்டார்."
+    },
+    "flores_verified": true
+  },
+  "C10": {
+    "concept": "water",
+    "category": "entity",
+    "translations": {
+      "en": "The patient should drink clean water.",
+      "hi": "रोगी को साफ पानी पीना चाहिए।",
+      "bn": "রোগীর পরিষ্কার পানি পান করা উচিত।",
+      "sw": "Mgonjwa anapaswa kunywa maji safi.",
+      "am": "ታማሚው ንጹህ ውሃ መጠጣት አለበት።",
+      "fr": "Le patient devrait boire de l'eau propre.",
+      "es": "El paciente debe beber agua limpia.",
+      "ar": "يجب على المريض شرب الماء النظيف.",
+      "yo": "Aláìsàn náà gbọdọ̀ mu omi mímọ́.",
+      "ta": "நோயாளி சுத்தமான தண்ணீர் குடிக்க வேண்டும்."
+    },
+    "flores_verified": true
+  },
+  "C11": {
+    "concept": "breathing",
+    "category": "action",
+    "translations": {
+      "en": "The child is having difficulty breathing.",
+      "hi": "बच्चे को साँस लेने में कठिनाई हो रही है।",
+      "bn": "শিশুটির শ্বাস নিতে কষ্ট হচ্ছে।",
+      "sw": "Mtoto anapata ugumu wa kupumua.",
+      "am": "ህፃኑ የመተንፈስ ችግር እያጋጠመው ነው።",
+      "fr": "L'enfant a des difficultés à respirer.",
+      "es": "El niño tiene dificultad para respirar.",
+      "ar": "الطفل يعاني من صعوبة في التنفس.",
+      "yo": "Ọmọ náà ní ìṣòro mímí.",
+      "ta": "குழந்தைக்கு சுவாசிப்பதில் சிரமம் இருக்கிறது."
+    },
+    "flores_verified": true
+  },
+  "C12": {
+    "concept": "eating",
+    "category": "action",
+    "translations": {
+      "en": "The patient is not eating enough food.",
+      "hi": "रोगी पर्याप्त भोजन नहीं खा रहा है।",
+      "bn": "রোগী যথেষ্ট খাবার খাচ্ছে না।",
+      "sw": "Mgonjwa hali chakula cha kutosha.",
+      "am": "ታማሚው በቂ ምግብ አይበላም።",
+      "fr": "Le patient ne mange pas assez.",
+      "es": "El paciente no está comiendo suficiente comida.",
+      "ar": "المريض لا يأكل ما يكفي من الطعام.",
+      "yo": "Aláìsàn náà kò jẹun tó.",
+      "ta": "நோயாளி போதுமான உணவு சாப்பிடவில்லை."
+    },
+    "flores_verified": true
+  },
+  "C13": {
+    "concept": "sleeping",
+    "category": "action",
+    "translations": {
+      "en": "The patient has trouble sleeping at night.",
+      "hi": "रोगी को रात में सोने में परेशानी होती है।",
+      "bn": "রোগীর রাতে ঘুমাতে সমস্যা হচ্ছে।",
+      "sw": "Mgonjwa ana shida ya kulala usiku.",
+      "am": "ታማሚው ማታ ለመተኛት ችግር አለበት።",
+      "fr": "Le patient a du mal à dormir la nuit.",
+      "es": "El paciente tiene problemas para dormir por la noche.",
+      "ar": "المريض يعاني من صعوبة في النوم ليلاً.",
+      "yo": "Aláìsàn náà ní ìṣòro sùn ní alẹ́.",
+      "ta": "நோயாளிக்கு இரவில் தூங்குவதில் சிரமம் இருக்கிறது."
+    },
+    "flores_verified": true
+  },
+  "C14": {
+    "concept": "dangerous",
+    "category": "severity",
+    "translations": {
+      "en": "This disease is dangerous for children.",
+      "hi": "यह बीमारी बच्चों के लिए खतरनाक है।",
+      "bn": "এই রোগটি শিশুদের জন্য বিপজ্জনক।",
+      "sw": "Ugonjwa huu ni hatari kwa watoto.",
+      "am": "ይህ በሽታ ለህፃናት አደገኛ ነው።",
+      "fr": "Cette maladie est dangereuse pour les enfants.",
+      "es": "Esta enfermedad es peligrosa para los niños.",
+      "ar": "هذا المرض خطير على الأطفال.",
+      "yo": "Àrùn yìí léwu fún àwọn ọmọ.",
+      "ta": "இந்த நோய் குழந்தைகளுக்கு ஆபத்தானது."
+    },
+    "flores_verified": true
+  },
+  "C15": {
+    "concept": "sick",
+    "category": "state",
+    "translations": {
+      "en": "The child has been sick for three days.",
+      "hi": "बच्चा तीन दिन से बीमार है।",
+      "bn": "শিশুটি তিন দিন ধরে অসুস্থ।",
+      "sw": "Mtoto amekuwa mgonjwa kwa siku tatu.",
+      "am": "ህፃኑ ለሦስት ቀናት ታሞ ቆይቷል።",
+      "fr": "L'enfant est malade depuis trois jours.",
+      "es": "El niño ha estado enfermo durante tres días.",
+      "ar": "الطفل مريض منذ ثلاثة أيام.",
+      "yo": "Ọmọ náà ti ṣàìsàn fún ọjọ́ mẹ́ta.",
+      "ta": "குழந்தை மூன்று நாட்களாக நோய்வாய்ப்பட்டுள்ளது."
+    },
+    "flores_verified": true
+  },
+  "C16": {
+    "concept": "healthy",
+    "category": "state",
+    "translations": {
+      "en": "The child is now healthy and strong.",
+      "hi": "बच्चा अब स्वस्थ और मजबूत है।",
+      "bn": "শিশুটি এখন সুস্থ ও সবল।",
+      "sw": "Mtoto sasa ana afya njema na nguvu.",
+      "am": "ህፃኑ አሁን ጤናማ እና ጠንካራ ነው።",
+      "fr": "L'enfant est maintenant en bonne santé et fort.",
+      "es": "El niño ahora está sano y fuerte.",
+      "ar": "الطفل الآن بصحة جيدة وقوي.",
+      "yo": "Ọmọ náà ti lera, ó sì lágbára.",
+      "ta": "குழந்தை இப்போது ஆரோக்கியமாகவும் வலிமையாகவும் இருக்கிறது."
+    },
+    "flores_verified": true
+  },
+  "C17": {
+    "concept": "newborn",
+    "category": "entity",
+    "translations": {
+      "en": "The newborn baby needs special care.",
+      "hi": "नवजात शिशु को विशेष देखभाल की आवश्यकता है।",
+      "bn": "নবজাতক শিশুর বিশেষ যত্ন প্রয়োজন।",
+      "sw": "Mtoto mchanga anahitaji utunzaji maalum.",
+      "am": "አዲስ የተወለደው ሕፃን ልዩ እንክብካቤ ያስፈልገዋል።",
+      "fr": "Le nouveau-né a besoin de soins particuliers.",
+      "es": "El recién nacido necesita cuidados especiales.",
+      "ar": "يحتاج المولود الجديد إلى رعاية خاصة.",
+      "yo": "Ọmọ tuntun náà nílò ìtọ́jú pàtàkì.",
+      "ta": "புதிதாகப் பிறந்த குழந்தைக்கு சிறப்பு கவனிப்பு தேவை."
+    },
+    "flores_verified": true
+  },
+  "C18": {
+    "concept": "malaria",
+    "category": "disease",
+    "translations": {
+      "en": "The patient has been diagnosed with malaria.",
+      "hi": "रोगी को मलेरिया का निदान हुआ है।",
+      "bn": "রোগীর ম্যালেরিয়া ধরা পড়েছে।",
+      "sw": "Mgonjwa amegunduliwa kuwa na malaria.",
+      "am": "ታማሚው ወባ እንዳለበት ተረጋግጧል።",
+      "fr": "Le patient a été diagnostiqué avec le paludisme.",
+      "es": "El paciente ha sido diagnosticado con malaria.",
+      "ar": "تم تشخيص إصابة المريض بالملاريا.",
+      "yo": "Wọ́n rí àrùn ibà jẹ́jẹ́rẹ́ lára aláìsàn náà.",
+      "ta": "நோயாளிக்கு மலேரியா இருப்பதாக கண்டறியப்பட்டது."
+    },
+    "flores_verified": true
+  },
+  "C19": {
+    "concept": "infection",
+    "category": "disease",
+    "translations": {
+      "en": "The wound has become infected.",
+      "hi": "घाव में संक्रमण हो गया है।",
+      "bn": "ক্ষতস্থানে সংক্রমণ হয়েছে।",
+      "sw": "Jeraha limeambukizwa.",
+      "am": "ቁስሉ ተበክሏል።",
+      "fr": "La blessure s'est infectée.",
+      "es": "La herida se ha infectado.",
+      "ar": "أصبح الجرح ملتهباً.",
+      "yo": "Ọgbẹ́ náà ti kó àkóràn.",
+      "ta": "காயத்தில் தொற்று ஏற்பட்டுள்ளது."
+    },
+    "flores_verified": true
+  },
+  "C20": {
+    "concept": "dehydration",
+    "category": "disease",
+    "translations": {
+      "en": "The child is showing signs of dehydration.",
+      "hi": "बच्चे में निर्जलीकरण के लक्षण दिख रहे हैं।",
+      "bn": "শিশুটির মধ্যে পানিশূন্যতার লক্ষণ দেখা যাচ্ছে।",
+      "sw": "Mtoto anaonyesha dalili za upungufu wa maji mwilini.",
+      "am": "ህፃኑ የውሃ እጥረት ምልክቶች እያሳየ ነው።",
+      "fr": "L'enfant montre des signes de déshydratation.",
+      "es": "El niño muestra signos de deshidratación.",
+      "ar": "يظهر على الطفل علامات الجفاف.",
+      "yo": "Ọmọ náà ń fi àmì àìtó omi hàn.",
+      "ta": "குழந்தை நீரிழப்பின் அறிகுறிகளைக் காட்டுகிறது."
+    },
+    "flores_verified": true
+  }
+}
