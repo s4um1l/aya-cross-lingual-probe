@@ -1,0 +1,301 @@
+{
+  "version": "1.0",
+  "source": "Failure taxonomy — Tiny Aya cross-lingual alignment analysis",
+  "categories": {
+    "TRANSLITERATION": "Hindi/Bengali/Tamil written in Latin script",
+    "CODE_SWITCH": "Mixed-language input within single sentence",
+    "FORMAL_REGISTER": "Medical/formal terminology vs model's training distribution",
+    "LOW_RESOURCE_VARIANT": "Dialect or regional variant within language family",
+    "UNICODE_EDGE": "Mixed script directions, Devanagari numerals, RTL/LTR mixing"
+  },
+  "cases": [
+    {
+      "test_id": "edge_001",
+      "input": "mera bachcha bahut zyada sick ho gaya",
+      "language_ground_truth": "hi",
+      "expected_variant": "base",
+      "failure_category": "TRANSLITERATION",
+      "routing_recommendation": "Route to Base; Fire fails on Hinglish because Latin-script Hindi tokens are out of distribution for the Devanagari-tuned variant",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_002",
+      "input": "bachche ko bukhar hai aur wo khana nahi kha raha",
+      "language_ground_truth": "hi",
+      "expected_variant": "base",
+      "failure_category": "TRANSLITERATION",
+      "routing_recommendation": "Route to Base; romanized Hindi triggers English token embeddings in Fire",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_003",
+      "input": "amar shishur jor hoyeche, ki korbo",
+      "language_ground_truth": "bn",
+      "expected_variant": "base",
+      "failure_category": "TRANSLITERATION",
+      "routing_recommendation": "Route to Base; romanized Bengali is not in Fire's fine-tuning distribution",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_004",
+      "input": "kuzhanthaiku kaichal irukku romba kashtam",
+      "language_ground_truth": "ta",
+      "expected_variant": "base",
+      "failure_category": "TRANSLITERATION",
+      "routing_recommendation": "Route to Base; romanized Tamil tokenizes as Latin-script nonsense for Fire",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_005",
+      "input": "dawai time pe leni chahiye warna asar nahi hoga",
+      "language_ground_truth": "hi",
+      "expected_variant": "base",
+      "failure_category": "TRANSLITERATION",
+      "routing_recommendation": "Route to Base; Hinglish with no English words still uses Latin script",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_006",
+      "input": "rogi ka blood pressure bahut zyada high hai",
+      "language_ground_truth": "hi",
+      "expected_variant": "base",
+      "failure_category": "TRANSLITERATION",
+      "routing_recommendation": "Route to Base; Hinglish with medical English terms, double script confusion",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_007",
+      "input": "ami bhalo nei, amar pet e byatha",
+      "language_ground_truth": "bn",
+      "expected_variant": "base",
+      "failure_category": "TRANSLITERATION",
+      "routing_recommendation": "Route to Base; romanized Bengali is out-of-distribution for Devanagari-tuned variants",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_008",
+      "input": "My bachcha has bukhar since kal and won't stop crying",
+      "language_ground_truth": "hi",
+      "expected_variant": "base",
+      "failure_category": "CODE_SWITCH",
+      "routing_recommendation": "Route to Base; Hindi-English code-switching confuses Fire's language detector",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_009",
+      "input": "Doctor sahab ne kaha take medicine daily for one week",
+      "language_ground_truth": "hi",
+      "expected_variant": "base",
+      "failure_category": "CODE_SWITCH",
+      "routing_recommendation": "Route to Base; Hindi embedded in English frame, competing language signals",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_010",
+      "input": "Le mtoto is très malade, we need to go hospital",
+      "language_ground_truth": "sw",
+      "expected_variant": "base",
+      "failure_category": "CODE_SWITCH",
+      "routing_recommendation": "Route to Base; Swahili + French + English code-switch, no single variant covers all three",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_011",
+      "input": "Mama yangu anasema take paracetamol but mimi I don't want",
+      "language_ground_truth": "sw",
+      "expected_variant": "base",
+      "failure_category": "CODE_SWITCH",
+      "routing_recommendation": "Route to Base; Swahili-English code-switch disrupts Earth's language commitment",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_012",
+      "input": "L'enfant a de la fièvre wa haja ya dawa haraka",
+      "language_ground_truth": "fr",
+      "expected_variant": "base",
+      "failure_category": "CODE_SWITCH",
+      "routing_recommendation": "Route to Base; French to Swahili mid-sentence switch, neither Fire nor Earth is optimal",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_013",
+      "input": "\u0628\u0627\u0628\u0627 \u0642\u0627\u0644 the doctor wants to run some tests tomorrow",
+      "language_ground_truth": "ar",
+      "expected_variant": "base",
+      "failure_category": "CODE_SWITCH",
+      "routing_recommendation": "Route to Base; Arabic-English code-switch with script change mid-sentence",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_014",
+      "input": "बच्चे में acute respiratory distress syndrome के लक्षण हैं",
+      "language_ground_truth": "hi",
+      "expected_variant": "base",
+      "failure_category": "FORMAL_REGISTER",
+      "routing_recommendation": "Route to Base; English clinical terminology embedded in Hindi delays Fire's commitment",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_015",
+      "input": "Mtoto ana dalili za severe acute malnutrition na anahitaji IV fluids",
+      "language_ground_truth": "sw",
+      "expected_variant": "base",
+      "failure_category": "FORMAL_REGISTER",
+      "routing_recommendation": "Route to Base; WHO clinical terminology in Swahili context, Earth not tuned for medical register",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_016",
+      "input": "Le patient présente une insuffisance rénale aiguë avec comorbidité cardiaque",
+      "language_ground_truth": "fr",
+      "expected_variant": "base",
+      "failure_category": "FORMAL_REGISTER",
+      "routing_recommendation": "Route to Base; highly formal French medical register, not in conversational fine-tuning data",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_017",
+      "input": "রোগীর diagnosis হয়েছে chronic obstructive pulmonary disease",
+      "language_ground_truth": "bn",
+      "expected_variant": "base",
+      "failure_category": "FORMAL_REGISTER",
+      "routing_recommendation": "Route to Base; English clinical diagnosis embedded in Bengali sentence",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_018",
+      "input": "El paciente tiene contraindicación para la administración de anticoagulantes",
+      "language_ground_truth": "es",
+      "expected_variant": "base",
+      "failure_category": "FORMAL_REGISTER",
+      "routing_recommendation": "Route to Base; pharmaceutical Spanish with Latinate clinical vocabulary",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_019",
+      "input": "रोगी को prophylaxis दी गई है epidemiological risk assessment के आधार पर",
+      "language_ground_truth": "hi",
+      "expected_variant": "base",
+      "failure_category": "FORMAL_REGISTER",
+      "routing_recommendation": "Route to Base; dense English medical jargon in Hindi frame overwhelms Fire",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_020",
+      "input": "hamaar bachcha ke bukhar baa, dawai de da",
+      "language_ground_truth": "hi",
+      "expected_variant": "base",
+      "failure_category": "LOW_RESOURCE_VARIANT",
+      "routing_recommendation": "Route to Base; Bhojpuri dialect classified as Hindi but out-of-distribution for Fire",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_021",
+      "input": "mtoto amefall sick sana jana hospitali haraka",
+      "language_ground_truth": "sw",
+      "expected_variant": "base",
+      "failure_category": "LOW_RESOURCE_VARIANT",
+      "routing_recommendation": "Route to Base; Sheng (Swahili-English urban slang) is not in Earth's fine-tuning data",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_022",
+      "input": "dereyet w'alad andek homa, lazem trouh l'tobib",
+      "language_ground_truth": "ar",
+      "expected_variant": "base",
+      "failure_category": "LOW_RESOURCE_VARIANT",
+      "routing_recommendation": "Route to Base; Algerian Darija classified as Arabic but uses French loanwords and non-standard grammar",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_023",
+      "input": "pillaiki jvaram unnadi, doctor daggara vellu",
+      "language_ground_truth": "te",
+      "expected_variant": "base",
+      "failure_category": "LOW_RESOURCE_VARIANT",
+      "routing_recommendation": "Route to Base; Telugu in Latin script may be misrouted to Tamil; Base handles the ambiguity better",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_024",
+      "input": "chhawa ke tapa ho gelo, ek dam kharap lagchhe",
+      "language_ground_truth": "hi",
+      "expected_variant": "base",
+      "failure_category": "LOW_RESOURCE_VARIANT",
+      "routing_recommendation": "Route to Base; Maithili dialect of Hindi, non-standard verb forms confuse Fire",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_025",
+      "input": "nwa naa ni aisan, ko si le ka hospital",
+      "language_ground_truth": "yo",
+      "expected_variant": "base",
+      "failure_category": "LOW_RESOURCE_VARIANT",
+      "routing_recommendation": "Route to Base; non-standard Yoruba without diacritics, Earth cannot distinguish from generic Latin text",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_026",
+      "input": "hamar laika ke pet dukhaat ba, kuchh karo",
+      "language_ground_truth": "hi",
+      "expected_variant": "base",
+      "failure_category": "LOW_RESOURCE_VARIANT",
+      "routing_recommendation": "Route to Base; Awadhi dialect, Hindi-adjacent but distinct morphology",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_027",
+      "input": "\u0627\u0644\u0637\u0641\u0644 \u0639\u0645\u0631\u0647 3 \u0633\u0646\u0648\u0627\u062a \u0648\u0644\u062f\u064a\u0647 \u062d\u0645\u0649 \u0645\u0646\u0630 2 days",
+      "language_ground_truth": "ar",
+      "expected_variant": "base",
+      "failure_category": "UNICODE_EDGE",
+      "routing_recommendation": "Route to Base; mixed RTL Arabic with LTR English and Western Arabic numerals causes tokenization issues",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_028",
+      "input": "\u092c\u091a\u094d\u091a\u0947 \u0915\u093e \u0924\u093e\u092a\u092e\u093e\u0928 \u0967\u0966\u0969\u00b0F \u0939\u0948",
+      "language_ground_truth": "hi",
+      "expected_variant": "base",
+      "failure_category": "UNICODE_EDGE",
+      "routing_recommendation": "Route to Base; Devanagari numerals (\u0967\u0966\u0969) mixed with Latin degree symbol causes token boundary issues",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_029",
+      "input": "\u0b95\u0bc1\u0bb4\u0ba8\u0bcd\u0ba4\u0bc8\u200c\u0b95\u0bcd\u0b95\u0bc1 40\u00b0C \u0b95\u0bbe\u0baf\u0bcd\u0b9a\u0bcd\u0b9a\u0bb2\u0bcd \u2013 danger zone",
+      "language_ground_truth": "ta",
+      "expected_variant": "base",
+      "failure_category": "UNICODE_EDGE",
+      "routing_recommendation": "Route to Base; Tamil with ZWNJ, Latin temperature, en-dash, and English suffix cause tokenizer confusion",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_030",
+      "input": "omo naa\u200bni iba to buru, e nilo itoju ni ile iwosan",
+      "language_ground_truth": "yo",
+      "expected_variant": "base",
+      "failure_category": "UNICODE_EDGE",
+      "routing_recommendation": "Route to Base; zero-width space inside Yoruba word causes token splitting at wrong boundary",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_031",
+      "input": "\u0627\u0644\u0645\u0631\u064a\u0636 \u064a\u062d\u062a\u0627\u062c treatment \u0641\u064a \u0627\u0644\u0640 ICU \u062e\u0644\u0627\u0644 \u0662\u0664 \u0633\u0627\u0639\u0629",
+      "language_ground_truth": "ar",
+      "expected_variant": "base",
+      "failure_category": "UNICODE_EDGE",
+      "routing_recommendation": "Route to Base; Arabic with embedded English abbreviation (ICU), Eastern Arabic numerals, and mixed text direction",
+      "p1_test_assertion": "router should return 'base' for this input"
+    },
+    {
+      "test_id": "edge_032",
+      "input": "\u0939\u093f\u0928\u094d\u0926\u0940\u0020\u0645\u0639\u0020English \u0e41\u0e25\u0e30 42\u00b0\u0424",
+      "language_ground_truth": "hi",
+      "expected_variant": "base",
+      "failure_category": "UNICODE_EDGE",
+      "routing_recommendation": "Route to Base; extreme multi-script edge case (Devanagari + Arabic + Latin + Thai + Cyrillic degree symbol) causes complete tokenizer breakdown",
+      "p1_test_assertion": "router should return 'base' for this input"
+    }
+  ]
+}
