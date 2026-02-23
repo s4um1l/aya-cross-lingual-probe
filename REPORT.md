@@ -1,6 +1,6 @@
 # Tiny Aya Builds Shared Concepts Mid-Network Then Destroys Them at Output Layers — And Regional Fine-Tuning Determines How Well It Builds Them
 
-**Saumil Srivastava, ScaleInnovate Labs**
+**Saumil Srivastava**
 
 February 2026
 

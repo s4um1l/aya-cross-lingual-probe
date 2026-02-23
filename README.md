@@ -172,4 +172,4 @@ MIT
 
 ## Author
 
-Saumil Srivastava, [ScaleInnovate Labs](https://scaleinnovate.com)
+Saumil Srivastava

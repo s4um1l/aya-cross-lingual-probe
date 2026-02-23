@@ -112,7 +112,7 @@ For methodology and findings, see the research report in this repository:
 ```
 REPORT.md — "Tiny Aya Builds Shared Concepts Mid-Network Then Destroys Them
 at Output Layers — And Regional Fine-Tuning Determines How Well It Builds Them"
-Saumil Srivastava, ScaleInnovate Labs, February 2026
+Saumil Srivastava, February 2026
 ```
 
 ## License
